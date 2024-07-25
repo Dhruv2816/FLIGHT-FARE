@@ -1,0 +1,72 @@
+[ 2024-07-25 02:40:24,881 ] 29 root - INFO - Entered the data ingestion method or component
+[ 2024-07-25 02:40:25,294 ] 32 root - INFO - Read the dataset as dataframe
+[ 2024-07-25 02:40:26,645 ] 38 root - INFO - Train test split initiated
+[ 2024-07-25 02:40:27,979 ] 45 root - INFO - Inmgestion of the data iss completed
+[ 2024-07-25 02:40:28,420 ] 65 root - INFO - Read train and test data completed
+[ 2024-07-25 02:40:28,650 ] 104 root - INFO - Obtaining preprocessing object
+[ 2024-07-25 02:40:28,650 ] 109 root - INFO - Applying preprocessing object on training and testing dataframes
+[ 2024-07-25 02:40:37,605 ] 147 root - INFO - Saved preprocessing object.
+[ 2024-07-25 02:40:37,618 ] 32 root - INFO - Loading preprocessor
+[ 2024-07-25 02:40:37,628 ] 36 root - INFO - train_array shape: (5000, 15)
+[ 2024-07-25 02:40:37,628 ] 37 root - INFO - test_array shape: (2000, 15)
+[ 2024-07-25 02:40:37,629 ] 71 root - INFO - Starting RandomizedSearchCV
+[ 2024-07-25 02:44:57,154 ] 79 root - INFO - XGBoost Best R^2 Score: 6564.068042232237
+[ 2024-07-25 02:44:57,154 ] 80 root - INFO - Best parameters for XGBoost: {'regressor__subsample': 0.9, 'regressor__reg_lambda': 0.5, 'regressor__reg_alpha': 0, 'regressor__n_estimators': 300, 'regressor__min_child_weight': 20, 'regressor__max_depth': 10, 'regressor__learning_rate': 0.5, 'regressor__colsample_bytree': 0.9}
+[ 2024-07-25 02:44:57,193 ] 91 root - INFO - Mean Absolute Error: 4377.192530273437
+[ 2024-07-25 02:44:57,193 ] 92 root - INFO - Mean Squared Error: 47889288.83133516
+[ 2024-07-25 02:44:57,193 ] 93 root - INFO - Root Mean Squared Error: 6920.2087274398855
+[ 2024-07-25 02:44:57,193 ] 94 root - INFO - R^2 Score: 0.8793434500694275
+[ 2024-07-25 02:44:57,232 ] 102 root - INFO - Feature Importances:
+[ 2024-07-25 02:44:57,232 ] 103 root - INFO -                          Feature  Importance
+15           cat__Class_Business    0.660149
+32     cat__Total_stops_non-stop    0.052862
+29    cat__Departure_Before 6 AM    0.028996
+9         cat__Airline_Air India    0.017068
+10          cat__Airline_AirAsia    0.014061
+24           cat__Source_Kolkata    0.012681
+19         cat__Source_Ahmedabad    0.012508
+16            cat__Class_Economy    0.012278
+42      cat__Destination_Kolkata    0.010684
+31      cat__Total_stops_2+-stop    0.009933
+22             cat__Source_Delhi    0.009737
+0         num__Duration_in_hours    0.009708
+1                 num__Days_left    0.008310
+18    cat__Class_Premium Economy    0.007037
+40        cat__Destination_Delhi    0.006960
+43       cat__Destination_Mumbai    0.006738
+38    cat__Destination_Bangalore    0.006708
+37    cat__Destination_Ahmedabad    0.006514
+5        cat__Journey_day_Sunday    0.005401
+36      cat__Arrival_Before 6 AM    0.005255
+14          cat__Airline_Vistara    0.005254
+20         cat__Source_Bangalore    0.004822
+28     cat__Departure_After 6 PM    0.004467
+25            cat__Source_Mumbai    0.004342
+21           cat__Source_Chennai    0.004267
+27   cat__Departure_6 AM - 12 PM    0.004198
+34     cat__Arrival_6 AM - 12 PM    0.004194
+3        cat__Journey_day_Monday    0.004141
+41    cat__Destination_Hyderabad    0.003696
+23         cat__Source_Hyderabad    0.003628
+7       cat__Journey_day_Tuesday    0.003539
+39      cat__Destination_Chennai    0.003538
+2        cat__Journey_day_Friday    0.003523
+50      remainder__Journey_month    0.003326
+33     cat__Arrival_12 PM - 6 PM    0.003290
+48    cat__Daytime_arrival_False    0.002889
+45          cat__On_weekend_True    0.002847
+30       cat__Total_stops_1-stop    0.002816
+35       cat__Arrival_After 6 PM    0.002780
+46  cat__Daytime_departure_False    0.002774
+12           cat__Airline_Indigo    0.002773
+6      cat__Journey_day_Thursday    0.002514
+4      cat__Journey_day_Saturday    0.002494
+26   cat__Departure_12 PM - 6 PM    0.002260
+8     cat__Journey_day_Wednesday    0.002259
+13            cat__Airline_Other    0.002255
+49     cat__Daytime_arrival_True    0.002151
+44         cat__On_weekend_False    0.001910
+11         cat__Airline_GO FIRST    0.001781
+47   cat__Daytime_departure_True    0.001682
+17              cat__Class_First    0.000000
+[ 2024-07-25 02:46:30,804 ] 116 root - INFO - Model and preprocessor saved to artifacts\xgboost_model.pkl

@@ -1,0 +1,86 @@
+15           cat__Class_Business    0.660149
+32     cat__Total_stops_non-stop    0.052862
+29    cat__Departure_Before 6 AM    0.028996
+9         cat__Airline_Air India    0.017068
+10          cat__Airline_AirAsia    0.014061
+24           cat__Source_Kolkata    0.012681
+19         cat__Source_Ahmedabad    0.012508
+16            cat__Class_Economy    0.012278
+42      cat__Destination_Kolkata    0.010684
+31      cat__Total_stops_2+-stop    0.009933
+22             cat__Source_Delhi    0.009737
+0         num__Duration_in_hours    0.009708
+1                 num__Days_left    0.008310
+18    cat__Class_Premium Economy    0.007037
+40        cat__Destination_Delhi    0.006960
+43       cat__Destination_Mumbai    0.006738
+38    cat__Destination_Bangalore    0.006708
+37    cat__Destination_Ahmedabad    0.006514
+5        cat__Journey_day_Sunday    0.005401
+36      cat__Arrival_Before 6 AM    0.005255
+14          cat__Airline_Vistara    0.005254
+20         cat__Source_Bangalore    0.004822
+28     cat__Departure_After 6 PM    0.004467
+25            cat__Source_Mumbai    0.004342
+21           cat__Source_Chennai    0.004267
+27   cat__Departure_6 AM - 12 PM    0.004198
+34     cat__Arrival_6 AM - 12 PM    0.004194
+3        cat__Journey_day_Monday    0.004141
+41    cat__Destination_Hyderabad    0.003696
+23         cat__Source_Hyderabad    0.003628
+7       cat__Journey_day_Tuesday    0.003539
+39      cat__Destination_Chennai    0.003538
+2        cat__Journey_day_Friday    0.003523
+50      remainder__Journey_month    0.003326
+33     cat__Arrival_12 PM - 6 PM    0.003290
+48    cat__Daytime_arrival_False    0.002889
+45          cat__On_weekend_True    0.002847
+30       cat__Total_stops_1-stop    0.002816
+35       cat__Arrival_After 6 PM    0.002780
+46  cat__Daytime_departure_False    0.002774
+12           cat__Airline_Indigo    0.002773
+6      cat__Journey_day_Thursday    0.002514
+4      cat__Journey_day_Saturday    0.002494
+26   cat__Departure_12 PM - 6 PM    0.002260
+8     cat__Journey_day_Wednesday    0.002259
+13            cat__Airline_Other    0.002255
+49     cat__Daytime_arrival_True    0.002151
+44         cat__On_weekend_False    0.001910
+11         cat__Airline_GO FIRST    0.001781
+47   cat__Daytime_departure_True    0.001682
+17              cat__Class_First    0.000000
+
+
+
+
+
+
+
+
+
+
+Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough',
+                                   transformers=[('num',
+                                                  Pipeline(steps=[('quant',
+                                                                   QuantileTransformer(output_distribution='normal',
+                                                                                       random_state=0)),
+                                                                  ('robust',
+                                                                   RobustScaler())]),
+                                                  ['Duration_in_hours',
+                                                   'Days_left']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('onehot',
+                                                                   OneHotEncoder(ha...
+                              feature_types=None, gamma=None, gpu_id=0,
+                              grow_policy=None, importance_type=None,
+                              interaction_constraints=None, learning_rate=0.5,
+                              max_bin=None, max_cat_threshold=None,
+                              max_cat_to_onehot=None, max_delta_step=None,
+                              max_depth=10, max_leaves=None,
+                              min_child_weight=20, missing=nan,
+                              monotone_constraints=None, multi_strategy=None,
+                              n_estimators=300, n_jobs=None,
+                              num_parallel_tree=None, ...))])
