@@ -1,3 +1,5 @@
+# **FLIGHT FARE PROJECT**
+
 ### **Components:**
 - **data_ingestion.py**: Handles data loading and initial preprocessing steps.
 - **data_transformation.py**: Responsible for transforming the data, including scaling and encoding categorical variables.
