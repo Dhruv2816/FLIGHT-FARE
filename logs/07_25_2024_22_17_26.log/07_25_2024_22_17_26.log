@@ -1,0 +1,12 @@
+[ 2024-07-25 22:17:29,199 ] 29 root - INFO - Entered the data ingestion method or component
+[ 2024-07-25 22:17:29,640 ] 32 root - INFO - Read the dataset as dataframe
+[ 2024-07-25 22:17:30,989 ] 38 root - INFO - Train test split initiated
+[ 2024-07-25 22:17:32,431 ] 45 root - INFO - Inmgestion of the data iss completed
+[ 2024-07-25 22:17:32,982 ] 65 root - INFO - Read train and test data completed
+[ 2024-07-25 22:17:33,332 ] 104 root - INFO - Obtaining preprocessing object
+[ 2024-07-25 22:17:33,333 ] 109 root - INFO - Applying preprocessing object on training and testing dataframes
+[ 2024-07-25 22:17:43,547 ] 147 root - INFO - Saved preprocessing object.
+[ 2024-07-25 22:17:43,585 ] 32 root - INFO - Loading preprocessor
+[ 2024-07-25 22:17:43,603 ] 36 root - INFO - train_array shape: (5000, 15)
+[ 2024-07-25 22:17:43,603 ] 37 root - INFO - test_array shape: (2000, 15)
+[ 2024-07-25 22:17:43,604 ] 71 root - INFO - Starting RandomizedSearchCV
