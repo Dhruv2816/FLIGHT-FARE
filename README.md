@@ -47,7 +47,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/flight-fare-prediction.git
+   git clone https://github.com/Dhruv2816/flight-fare-prediction.git
    cd flight-fare-prediction
 2. Create a virtual environment and activate it:
 python -m venv venv
